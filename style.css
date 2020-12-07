@@ -1,0 +1,70 @@
+html {
+  --main-color: #333333;
+  --holiday-color: #bd4848;
+  font-family: Roboto;
+  font-size: 62.5%;
+  background: rgb(176,216,217);
+  background: linear-gradient(18deg, rgba(176,216,217,1) 0%, rgba(255,174,0,1) 100%);
+}
+
+.month__header {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.container {
+  margin-top: 11rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 5rem;
+  height: 160rem;
+  width: 120rem;
+}
+
+.month-image {
+  z-index: -1;
+  position: absolute;
+  right: 2rem;
+  top: -11rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+}
+
+.january-image {
+  background-size: 100%;
+  background-image: url("jan.jpg");
+  background-position-x: -17rem;
+  background-position-y: -95rem;
+}
+
+.month {
+  position: relative;
+  height: 100%;
+}
+
+.month__data,
+.month__data--holiday {
+  font-size: 2rem;
+}
+
+.month__data--holiday,
+.week__day--holiday {
+  color: var(--holiday-color);
+}
+
+.week__day,
+.week__day--holiday {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.month__grid {
+  z-index: 100;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 1rem;
+}
